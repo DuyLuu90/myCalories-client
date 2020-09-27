@@ -2,13 +2,14 @@ import React from 'react';
 import CalorieCalendar from '../../component/calendar/calendar';
 import Mealinputform from '../../component/forms/mealInputform/mealInputform';
 import './homepage-style.css';
-import axios from 'axios'
+//import axios from 'axios'
 import moment from 'moment';
 import {MealApiServices} from '../../services/api-service'
 
 export default class HomePage extends React.Component {
 	state = {
 		date: new Date(),
+		month: moment(new Date()).format('YYYY-MM'),
 		allMeals:[],
 		mealsInfoOfTheMonth: [],
 		currentMealInfo: {},
@@ -26,12 +27,14 @@ export default class HomePage extends React.Component {
 		else this.setState({currentMealInfo:{}})		
 	}
 
-	updateMeals= ()=>{
-		const {userId} = this.props
-		MealApiServices.getMealsByUser(userId)
-			.then(array=>this.setState({allMeals: array}))
-			.then(()=>this.updateCurrentMeal())	
-			.then(()=>this.getDatesThatHaveMeals())
+	updateCaloriesOfTheMonth=()=>{
+		const format = (date) => moment(date).format('YYYY-MM')
+		const {month,allMeals}= this.state
+		const meals= allMeals.filter(obj=>format(obj.dateofmeal)===month).map(obj=>obj.alldaycalories)
+		if (meals) {
+			let total= meals.reduce((a,b)=>a+b,0)
+			this.setState({caloriesOfTheMonth: total})
+		}
 	}
 
 	getDatesThatHaveMeals= ()=>{
@@ -53,6 +56,17 @@ export default class HomePage extends React.Component {
 		}
 	}
 
+	updateMeals= ()=>{
+		const {userId} = this.props
+		MealApiServices.getMealsByUser(userId)
+			.then(array=>this.setState({allMeals: array}))
+			.then(()=>{
+				this.updateCurrentMeal()
+				this.getDatesThatHaveMeals()
+				this.updateCaloriesOfTheMonth()
+			})
+	}
+
 	componentDidMount(){
 		this.updateMeals()
 	}
@@ -68,14 +82,23 @@ export default class HomePage extends React.Component {
 			date: new Date(selectedDate).toISOString(),	
 		});
 		this.updateCurrentMeal()
-		/*
-		const {mealsInfoOfTheMonth,date}= this.state
-		const currentMeal = mealsInfoOfTheMonth.filter((meal) => meal.dateofmeal.slice(0,10)===date.slice(0,10));
-		*/
+		this.updateCaloriesOfTheMonth()
 	};
 
+	getCurrentMonth = async()=>{
+		const x= document.getElementsByClassName('react-calendar__navigation__label__labelText')[0].innerHTML
+		if (isNaN(x[0])) {
+			const month= moment(new Date(x)).format('YYYY-MM')
+			await this.setState({month:month})
+			this.updateCaloriesOfTheMonth()
+			this.getDatesThatHaveMeals()
+		}
+	}
+
+	/*
 	getMealInfoByMonth = async (yearAndMonth) => {
 		const selectedYearAndMonth = await yearAndMonth.activeStartDate;
+	
 		axios
 			.get(
 				`http://localhost:8000/api/meals/mealsbymonth/${new Date(selectedYearAndMonth)
@@ -94,23 +117,21 @@ export default class HomePage extends React.Component {
 
 				this.setState({ caloriesOfTheMonth: calorieCounterForTheMonth });
 			});
-	};
+	};*/
+	
 
 	render() {
-		const {date,mealsInfoOfTheMonth,currentMealInfo}= this.state
+		const {date,caloriesOfTheMonth,currentMealInfo}= this.state
 		let selectedDate = new Date(date);	
 		return (
 			<div className="home">
 				<h1>My Dashboard</h1>
 				<h2>
-					myCalories / Week = <p className="calorieTotal">9000</p>	
-				</h2>
-				<h2>
-					myCalories / Month = <p className="calorieTotal">{mealsInfoOfTheMonth}</p>	
+					myCalories / Month = <p className="calorieTotal">{caloriesOfTheMonth}</p>	
 				</h2>
 				<CalorieCalendar 
 					getSelectedDate={this.getSelectedDate} 
-					getMealInfoByMonth={this.getMealInfoByMonth}
+					getMealInfoByMonth={this.getCurrentMonth}
 					/>
 
 				{(selectedDate.toString() === 'Invalid Date') ? <h2> Select Date </h2> : <h2> {selectedDate.toDateString()} </h2>}
