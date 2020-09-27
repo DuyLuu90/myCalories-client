@@ -1,0 +1,49 @@
+.form{
+    margin: 25px auto;
+    width: 75%;
+    max-width: 700px;
+}
+.form_input{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.form_input label, .form_input header {
+    width: 30%;
+    text-align: left;
+}
+.form_input input {
+    width: 60%;
+}
+.biometric {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.biometric input {
+    width: 30%;
+}
+
+.form_control {
+    display: flex; justify-content: space-evenly; text-align: center;
+}
+.form_control button{
+    margin-top: 20px; width: 100px;padding: 10px;
+    border: none; color: white ; background-color: black;
+}
+.form_control button:hover {
+    cursor: pointer; color: yellow;
+}
+.form_control button:disabled {
+    cursor: not-allowed; background-color: gray;
+}
+.error {
+    color: red;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.error span {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 10px
+}

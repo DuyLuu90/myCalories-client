@@ -1,0 +1,30 @@
+.meal_entries{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.meal_entries input[type='text']{
+    width: 30%;
+}
+
+.meal_entries input[type='number']{
+    width: 30%;
+}
+
+.meal_entries input[type='button']{
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(255, 145, 0);
+}
+.meal_entries input[type='button']:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+.user__carb-form-error{
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}

@@ -1,0 +1,38 @@
+.fitnessTips {
+
+  margin-top: 75px;
+  position: relative;
+}
+
+.header {
+  position: relative;;
+  text-align: center;
+  font-size: 60px;
+}
+
+.fitness__options {
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+.fitness__image {
+  height: 500px;
+  transition: ease-in-out 0.4s;
+  border-radius: 4px;
+}
+
+.fitness__image:hover {
+  transform: scale(1.02);
+  transition: ease-in-out 0.5s;
+  
+}
+
+.imgContainer {
+  padding-top: 20px;
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+

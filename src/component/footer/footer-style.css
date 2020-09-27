@@ -1,0 +1,21 @@
+.app_footer{
+    position: relative;
+    bottom: 0; left: 0; right:0;
+    height: 80px;
+    text-align: center;
+    background-color:#283593;
+    color: white;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.app_footer div {
+    margin-bottom: 10px;
+}
+.app_footer a {
+    color:white;
+    text-decoration: none;
+}
+.app_footer a:hover {
+    color: yellow;
+}

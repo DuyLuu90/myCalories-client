@@ -1,0 +1,49 @@
+.landing {
+	margin-top: 150px;
+}
+.landing__header {
+	font-size: 40px;
+	text-transform: uppercase;
+	padding-bottom: 30px;
+}
+
+.landing__description {
+	font-size: 25px;
+	padding-bottom: 30px;
+}
+
+.landing__link {
+	font-size: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #303f9f;
+	margin: 10px;
+}
+.homePageLink {
+	text-decoration: none;
+	margin-top: 200px;
+	font-size: 35px;
+	color: white;
+	transition: ease-in-out 0.5s;
+}
+.landing__link {
+	font-size: 20px;
+	transition: ease-in-out 0.5s;
+}
+.homePageLink:hover {
+	font-size: 40px;
+	transition: ease-in-out 0.4s;
+}
+
+.landing__img {
+	margin: 0px auto;
+	margin-bottom: 50px;
+	padding-top: 300px;
+	width: 95%;
+	height: auto;
+	min-height: 80vh;
+	background-image: linear-gradient(#0505058f, #000000ad), url("../../assets/landing.jpg"); /* W3C */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

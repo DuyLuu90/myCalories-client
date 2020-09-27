@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.running__icon {
+    font-size: 40px;
+}
+.app_nav {
+    position: fixed; top:0; left:0; right:0; z-index: 10;
+    height: 77px;
+    border-bottom: solid; border-width: thin; border-color: rgb(109, 106, 106);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color:#283593 ; 
+    color: white;
+    overflow: hidden;
+}
+.app_nav h1 {
+    text-align: left;
+}
+.app_nav a {
+    text-decoration: none;
+}
+.app_nav a:hover {
+    color: yellow;
+}
+
+.app_nav h1{
+    width: 60%;
+}
+.dropdown {
+    width: 30%;
+    text-align: right;
+}
+.dropdown .icon {
+    font-size: 23px; cursor: pointer;
+}
+.dropdown div {
+    position: fixed; top: 60px; right:0; 
+    background-color: rgba(4,10,46,0.801);
+    display: flex;flex-direction: column;
+    text-align: left;
+}
+.dropdown div a {
+    padding: 10px;  font-weight: 600;
+}
+.dropdown div a:hover {
+    background-color: orange;
+    color: black;
+}
+
+.app_nav a {
+    color: white;   
+}
+.app_nav .menu {
+    display: none;
+}
+/*
+.Header-not-logged-in, .Header-logged-in {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.Header-logged-in a:nth-child(1) {
+    color: rgb(243, 113, 113);
+}
+.Header-logged-in a:nth-child(2) {
+    color: greenyellow
+}*/
+@media screen and (min-width: 815px) {
+    .app_nav .menu  {
+        display: flex;
+        width: 30%;
+    }
+    .app_nav .menu div {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .menu div a{
+        margin-right: 15px;
+    }
+    .dropdown {
+        display: none;
+    }
+}

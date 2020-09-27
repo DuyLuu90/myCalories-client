@@ -1,0 +1,59 @@
+.Login-form input,
+.displayPassword,
+.form_help {
+	width: 75%;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.message {
+	color: red;
+	margin: 10px;
+}
+
+.displayPassword {
+	color: gray;
+	font-size: 15px;
+	display: flex;
+}
+.displayPassword input {
+	width: 15px;
+	margin-right: 10px;
+}
+/*LOGIN*/
+
+#help-me-login button {
+	padding: 8px;
+	margin-top: 10px;
+	background-color: red;
+	color: white;
+	border-style: none;
+}
+#help-me-login button:disabled {
+	background-color: gray;
+	cursor: not-allowed;
+}
+#help-me-login p{
+	color: red;
+	text-align: center;
+	padding: 10px;
+}
+.form input{
+  padding:5px 10px;
+  }
+.LoginForm .form_help {
+	display: flex;
+	align-items: center;
+	color: blue;
+	font-size: 15px;
+}
+.form_help span {
+	margin: 5px;
+}
+.form_help span:hover {
+	cursor: pointer;
+	color: orange;
+}
+
+.error {
+	color: red;
+}
