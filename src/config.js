@@ -4,6 +4,6 @@ export default {
                 : 'http://localhost:8000/api',
 
     API_TOKEN: process.env.REACT_APP_API_TOKEN,
-    TOKEN_KEY: process.env.REACT_APP_JWT_SECRET || 'jwt-thinkful-2020-secret'
+    TOKEN_KEY: process.env.REACT_APP_JWT_SECRET || 'secret'
 }
 

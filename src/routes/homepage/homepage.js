@@ -7,6 +7,7 @@ import moment from 'moment';
 import {MealApiServices} from '../../services/api-service'
 
 export default class HomePage extends React.Component {
+	
 	state = {
 		date: new Date(),
 		month: moment(new Date()).format('YYYY-MM'),
@@ -16,6 +17,8 @@ export default class HomePage extends React.Component {
 		caloriesOfTheMonth: 0,
 		caloriesOfTheWeeks: 0
 	};
+
+	_isMounted= false
 
 	updateCurrentMeal=()=>{
 		const {allMeals,date}= this.state
@@ -68,7 +71,12 @@ export default class HomePage extends React.Component {
 	}
 
 	componentDidMount(){
-		this.updateMeals()
+		this._isMounted= true
+		this._isMounted && this.updateMeals()
+	}
+
+	componentWillUnmount(){
+		this._isMounted= false
 	}
 
 	onMealSuccess=()=>{
