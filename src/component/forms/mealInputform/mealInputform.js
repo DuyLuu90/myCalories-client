@@ -85,6 +85,7 @@ export default class mealInputform extends React.Component {
 			else {
 				MealsAndCalories.userid= userId
 				MealsAndCalories.dateofmeal= date;
+				console.log(MealsAndCalories)
 				GeneralApiServices.postItem('meals', MealsAndCalories)
 					.then((res) => {
 						onAddMealSuccess()
