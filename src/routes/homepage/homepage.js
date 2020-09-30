@@ -33,7 +33,7 @@ export default class HomePage extends React.Component {
 	updateCaloriesOfTheMonth=()=>{
 		const format = (date) => moment(date).format('YYYY-MM')
 		const {month,allMeals}= this.state
-		const meals= allMeals.filter(obj=>format(obj.dateofmeal)===month).map(obj=>obj.alldaycalories)
+		const meals= allMeals.filter(obj=>format(obj.dateofmeal)===month).map(obj=>Number(obj.alldaycalories))
 		if (meals) {
 			let total= meals.reduce((a,b)=>a+b,0)
 			this.setState({caloriesOfTheMonth: total})
