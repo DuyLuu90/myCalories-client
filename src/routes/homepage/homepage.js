@@ -2,7 +2,6 @@ import React from 'react';
 import CalorieCalendar from '../../component/calendar/calendar';
 import Mealinputform from '../../component/forms/mealInputform/mealInputform';
 import './homepage-style.css';
-//import axios from 'axios'
 import moment from 'moment';
 import {MealApiServices} from '../../services/api-service'
 
@@ -102,31 +101,6 @@ export default class HomePage extends React.Component {
 			this.getDatesThatHaveMeals()
 		}
 	}
-
-	/*
-	getMealInfoByMonth = async (yearAndMonth) => {
-		const selectedYearAndMonth = await yearAndMonth.activeStartDate;
-	
-		axios
-			.get(
-				`http://localhost:8000/api/meals/mealsbymonth/${new Date(selectedYearAndMonth)
-					.toISOString()
-					.slice(0, 7)}`
-			)
-			.then((res) => {
-				this.setState({ mealsInfoOfTheMonth: res.data });
-				return res.data;
-			})
-			.then((res) => {
-				let calorieCounterForTheMonth = 0;
-				for (let i = 0; i < res.length; i++) {
-					calorieCounterForTheMonth = Number(res[i].alldaycalories) + Number(calorieCounterForTheMonth);
-				}
-
-				this.setState({ caloriesOfTheMonth: calorieCounterForTheMonth });
-			});
-	};*/
-	
 
 	render() {
 		const {date,caloriesOfTheMonth,currentMealInfo}= this.state

@@ -1,7 +1,7 @@
 import React from 'react';
 import AuthHelperService from '../../../services/AuthHelperService'
 import {GeneralApiServices} from '../../../services/api-service'
-import {validateName,validatePassword,validateUsername, ValidationError,BiometricComponent} from '../form-helpers'
+import {validateName,validatePassword,validateUsername, BiometricComponent} from '../form-helpers'
 import './regForm-style.css'
 
 export default class RegForm extends React.Component {
@@ -49,8 +49,7 @@ export default class RegForm extends React.Component {
             age: age.value, gender: gender.value,
             height: height.value,weight: weight.value
         }
-        //console.log(data)
-        //this.setState({ error: null })
+        
         
         if (id) {
             for (let key of ['full_name','user_name','password','age','gender','height','weight']){
@@ -80,12 +79,20 @@ export default class RegForm extends React.Component {
 
     hideStatusMessage = ()=> this.setState({statusMessage:false})
 
+    renderError(message){
+        return (
+            <div className='formError'>
+                <span className='blank'></span>
+                <span className='error'>{message}</span>
+            </div>
+        )
+    }
+
     render() {
         const {user}= this.props
         const {name,user_name,password,userList}= this.state
         const usernameError= (user.user_name && !user_name.value)
             ? false
-            : (user.user_name===user_name.value) ? false
             : validateUsername(userList,user_name.value)
         const passwordError= (user.user_name && !password.value)
             ? false
@@ -101,17 +108,17 @@ export default class RegForm extends React.Component {
                     <label htmlFor="name">Name</label>
                     <input placeholder='Full Name' type="text" name='name' id='name' onChange={this.onChange}/>
                 </div>
-                {name.touch && <ValidationError message={nameError}/>}
+                {name.touch && this.renderError(nameError)}
                 <div className='form_input'>
                     <label htmlFor="username">Email/Username</label>
-                    <input type="text" name='user_name' id='user_name' onChange={this.onChange} />
+                    <input type="text" name='user_name' id='user_name' onChange={this.onChange} required/>
                 </div>
-                {user_name.touch && <ValidationError message={usernameError} />}
+                {user_name.touch && this.renderError(usernameError)}
                 <div className='form_input'>
                     <label htmlFor="password">Password</label>
                     <input type="password" name='password' id='password' onChange={this.onChange} autoComplete="off"/>
                 </div>
-                {password.touch && <ValidationError message={passwordError}/>}
+                {password.touch && this.renderError(passwordError)}
                 <BiometricComponent />
                 <div className='form_input'>
                     <label htmlFor="gender">Gender</label>

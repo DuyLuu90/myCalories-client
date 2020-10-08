@@ -6,6 +6,7 @@ import './app-style.css';
 //ROUTES:
 import HomePage from './routes/homepage/homepage';
 import LandingPage from './routes/landingpage/landingpage';
+import DemoPage from './routes/DemoPage/DemoPage'
 import RegistrationPage from './routes/regPage/regPage';
 import FitnessTipsPage from './component/fitness/fitness';
 import LoginPage from './routes/loginpage/loginpage';
@@ -25,13 +26,15 @@ export default class App extends Component {
       full_name:''
     }
   }
+  
   componentDidMount(){
     const authToken= TokenService.getAuthToken()
     if (authToken) {
       this.handleLoginSuccess()
     }
   }
-
+  
+  
   handleLoginSuccess = ()=>{
     const authToken=TokenService.getAuthToken()
     const userid=TokenService.parseJwt(authToken).user_id
@@ -43,7 +46,7 @@ export default class App extends Component {
         full_name: user.full_name
       }))
   }
-
+  
   handleLogoutSuccess = ()=>{
     TokenService.clearAuthToken()
     this.setState({
@@ -64,7 +67,8 @@ export default class App extends Component {
           <div className="content"> 
             <Switch>
               <Route exact path={'/'} component={(props) => <LandingPage {...props} />}/>
-              <Route path={'/home'} component={(props) => <HomePage {...props} userId={userid}/>}/>
+              <Route path={'/tour'} component={DemoPage}/>
+              <Route path={'/users/:id'} component={(props) => <HomePage {...props} userId={userid}/>}/>
               <Route path={'/register'}component={(props) => <RegistrationPage {...props} />}/>
               <Route path={'/login'} component={(props) => <LoginPage {...props} loginUpdate={this.handleLoginSuccess}/>}/>
               <Route path={'/fitnesstips'}component={(props) => <FitnessTipsPage {...props} />}/>

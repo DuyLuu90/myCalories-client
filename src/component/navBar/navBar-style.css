@@ -2,8 +2,8 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-  overflow-x: hidden;
-  text-align: center;
+    overflow-x: hidden;
+    text-align: center;
 }
 
 .running__icon {
@@ -61,19 +61,7 @@
 .app_nav .menu {
     display: none;
 }
-/*
-.Header-not-logged-in, .Header-logged-in {
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-    
-}
-.Header-logged-in a:nth-child(1) {
-    color: rgb(243, 113, 113);
-}
-.Header-logged-in a:nth-child(2) {
-    color: greenyellow
-}*/
+
 @media screen and (min-width: 815px) {
     .app_nav .menu  {
         display: flex;

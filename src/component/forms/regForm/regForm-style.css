@@ -37,13 +37,14 @@
 .form_control button:disabled {
     cursor: not-allowed; background-color: gray;
 }
-.error {
-    color: red;
+.formError {
     display: flex;
-    flex-direction: row-reverse;
 }
-.error span {
-    width: 70%;
+.formError .blank {
+    width: 30%;
+}
+.formError .error{
+    width: 60%;
     text-align: center;
     margin-bottom: 10px
 }

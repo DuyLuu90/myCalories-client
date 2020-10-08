@@ -26,7 +26,6 @@ export const GeneralApiServices = {
         )
     },
     postItem(dbName,item){
-        //const proxy='https://cors-anywhere.herokuapp.com'
         return fetch(`${config.API_ENDPOINT}/${dbName}`,{
             method: `POST`,
             headers:{

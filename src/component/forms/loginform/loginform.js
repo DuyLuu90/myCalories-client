@@ -28,7 +28,6 @@ export default class LoginForm extends React.Component {
 
 	handleSubmitJwtAuth = (ev) => {
 		ev.preventDefault();
-		//console.log('form submitted');
 		this.setState({ error: null });
 		const { user_name, password } = ev.target;
 		const login = {
@@ -38,14 +37,17 @@ export default class LoginForm extends React.Component {
 
 		AuthHelperService.postLogin(JSON.stringify(login))
 			.then((res) => {
-				TokenService.saveAuthToken(res.authToken);
-				user_name.value = '';
-				password.value = '';
-				this.props.onLoginSuccess();
+				if (res.authToken){
+					TokenService.saveAuthToken(res.authToken);
+					user_name.value = '';
+					password.value = '';
+					this.props.onLoginSuccess();
+				}
+				else this.setState({error: res.error})
+				
 			})
 			.catch((res) => {
-				this.setState({ error: res.message });
-				//alert(JSON.stringify(this.state.error));
+				this.setState({ error: res.error });
 			});
 	};
 
@@ -93,7 +95,6 @@ export default class LoginForm extends React.Component {
 	}
 	renderForgotPasswordForm() {
 		const { passwordMessage } = this.state;
-		//const boolean= (passwordMessage)? true: false
 		const message = passwordMessage ? <div className="message">{passwordMessage}</div> : '';
 		return (
 			<form className="form" onSubmit={this.handleForgotPasswordSubmitted} >
@@ -147,7 +148,7 @@ export default class LoginForm extends React.Component {
 			</form>
 		);
 	}
-	// 
+	
 	render() {
 		const { error, displayForm } = this.state;
 		const form =

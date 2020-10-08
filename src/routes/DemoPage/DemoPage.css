@@ -1,0 +1,139 @@
+.content {
+    margin: 77px 0;
+    padding: 0;
+}
+
+.demo .highlight {
+    background-color: black;
+    font-weight: 700;
+}
+.demo .active{
+    background-color: red;
+}
+.demo nav {
+    background-color: rgb(204, 197, 197);
+    display: flex;
+    text-align: center;
+}
+.demo nav .active {
+    color: yellow
+}
+.demo nav span {
+    color: white;
+    width: 50%;
+    border-style: solid;
+    border-width: thin;
+    padding: 12px;
+    cursor: pointer;
+}
+.demo_accounts{
+    padding: 15px;
+}
+.demo_accounts h2 {
+    color: rgb(138, 120, 17);
+}
+.demo_accounts h3{
+    margin-bottom: 20px;
+}
+.demo_accounts div {
+    width: 75%;
+    font-size: 16px;
+    border-style: solid;
+    min-width: 260px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 5px;
+    background-color: orange;   
+}
+.demo_accounts div p {
+    display: flex;
+}
+.demo_accounts div strong {
+    width: 30%;
+}
+.demo_accounts div span {
+    width: 70%;
+}
+
+.tour_nav {
+    display: flex;
+    background-color: rgb(22, 128, 22);
+    color: white;
+    text-align: center;
+}
+.tour_nav span {
+    width: 50%;
+    border-style: solid;
+    border-width: thin;
+    padding: 10px;
+    cursor: pointer;
+    border-top: none;
+}
+
+.tour_content {
+    padding: 15px;
+    min-height: 450px;
+    font-size: 20px;
+    text-align: left;
+    
+}
+.tour_content h2{
+    color: rgb(141, 50, 17);
+    font-weight: bold;;
+}
+.app_features div {
+    margin-bottom: 20px;
+}
+.app_features .text, .app_features li {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.app_features li {
+    display: flex;
+    justify-content: space-between;
+}
+.app_features li strong {
+    width: 32%;
+    text-align: left;
+}
+.app_features li span {
+    text-align: left;
+    width: 62%;
+    min-height: 20px;
+}
+
+.featureImg{
+    text-align: center;
+}
+
+.app_features img {
+    width: 80%;
+    min-width: 280;
+    max-width: 350px;
+    height: auto;
+    margin: 20 auto;;
+}
+
+@media screen and (min-width: 700px) {
+    .app_features{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 15px auto;
+    }
+    .app_features .text{
+        width: 48%;
+    }
+    #visitor{
+        font-size: 25px;
+    }
+    .app_features .featureImg{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}

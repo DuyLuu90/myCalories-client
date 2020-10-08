@@ -38,7 +38,6 @@ export function validatePassword(password='') {
 }
 
 export function validateUsername(userList=[],username='') {
-    //username= username.trim.toLocaleLowerCase()
     const usernameExists= userList.find(user=>user.user_name===username)
     if (username.length===0) return 'Username is required'
     if (usernameExists) return 'Username already exists'

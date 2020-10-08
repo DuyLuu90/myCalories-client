@@ -5,6 +5,7 @@
 	font-size: 40px;
 	text-transform: uppercase;
 	padding-bottom: 30px;
+	color: rgb(175, 151, 17);
 }
 
 .landing__description {
@@ -16,8 +17,14 @@
 	font-size: 20px;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #303f9f;
 	margin: 10px;
+	background-color: orange; color: black;
+	padding: 10px;
+}
+
+.landing__link:hover{
+	background-color: red;
+	color: white;
 }
 .homePageLink {
 	text-decoration: none;

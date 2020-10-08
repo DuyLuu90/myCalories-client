@@ -23,6 +23,7 @@ export default class NavBar extends Component{
             <div className='Header-logged-in' onClick={this.closeDropdown}>
                 <Link onClick={this.props.onLogoutSuccess} to='/'aria-label='logout'>Logout</Link>
                 <Link to={'/users/'+this.props.token.userid} className='blue'aria-label='home-page'>{this.props.token.full_name}</Link>
+                <Link to='/fitnesstips' aria-label='fitness-tips'>Fitness Tips</Link>
                 {this.props.token.isAdmin && <Link to='/admin'aria-label='admin-page'> Admin</Link> }
             </div>
         )

@@ -7,7 +7,6 @@ export default class CalorieCalendar extends React.Component {
 	state = {
 		date: new Date(),
 		currentDate: '',
-		// hover:new Date(),
 	};
 
 	render() {
@@ -18,7 +17,6 @@ export default class CalorieCalendar extends React.Component {
 				onActiveStartDateChange={(date) =>getMealInfoByMonth(date)}
 				onChange={(date) => {						
 					getSelectedDate(date);
-					//getMealInfoOfTheDay();
 				}}
 			/>
 		);
