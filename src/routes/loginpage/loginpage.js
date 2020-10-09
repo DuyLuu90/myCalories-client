@@ -20,10 +20,7 @@ export default class LoginPage extends React.Component {
     render() {
         return (
         <section className="login_page">
-            <header role="banner">
-                <h1>Carb Counter</h1>
-                <h3>Sign in to keep track of your calorie intake</h3>
-            </header>
+            <h1>Sign in</h1>
             <LoginForm 
                 onLoginSuccess={this.handleLoginSuccess}
             />

@@ -1,6 +1,6 @@
 .form{
     margin: 25px auto;
-    width: 75%;
+    width: 85%;
     max-width: 700px;
 }
 .form_input{
@@ -9,16 +9,16 @@
     margin-bottom: 10px;
 }
 .form_input label, .form_input header {
-    width: 40%;
+    width: 35%;
     text-align: left;
 }
 .form_input input {
-    width: 60%;
+    width: 65%;
 }
 .biometric {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 65%;
 }
 .biometric input {
     width: 30%;

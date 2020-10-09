@@ -2,7 +2,6 @@ import React from 'react';
 import TokenService from '../../../services/TokenService';
 import AuthHelperService from '../../../services/AuthHelperService';
 import {GeneralApiServices} from '../../../services/api-service'
-import { Link } from 'react-router-dom';
 import './loginform-style.css';
 
 export default class LoginForm extends React.Component {
@@ -136,11 +135,14 @@ export default class LoginForm extends React.Component {
 					<label htmlFor="togglePassword">show password</label>
 				</div>
 				<div className="form_help">
-					<span onClick={this.handleForgotUsernameClicked}>Forgot username</span>
-					{' | '}
-					<span onClick={this.handleForgotPasswordClicked}>Forgot password</span>
-					{' | '}
-					<Link to={'/register'}>Register</Link>
+					<span onClick={this.handleForgotUsernameClicked}>
+						Forgot username 
+					</span>
+					
+					<span onClick={this.handleForgotPasswordClicked}>
+						Forgot password 
+					</span>					
+					
 				</div>
 				<div className="form_control">
 					<button type="submit">Login</button>

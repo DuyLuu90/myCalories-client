@@ -110,7 +110,7 @@ export default class RegForm extends React.Component {
                 </div>
                 {name.touch && this.renderError(nameError)}
                 <div className='form_input'>
-                    <label htmlFor="username">Email/Username</label>
+                    <label htmlFor="username">Username</label>
                     <input type="text" name='user_name' id='user_name' onChange={this.onChange} required/>
                 </div>
                 {user_name.touch && this.renderError(usernameError)}

@@ -12,7 +12,12 @@ export default class LandingPage extends React.Component {
 			? 	<Link to={'/users/'+this.props.token.userid} className='homePageLink'aria-label='home-page'>
 					My Dashboard
 				</Link>
-			: <div className='quote'>STRIVE FOR<strong>PROGESS</strong>NOT FOR <strong>PERFECTION</strong></div>
+			: <div className='quote'>
+				<span>STRIVE FOR</span>
+				<strong>PROGESS</strong>
+				<span>NOT FOR </span>
+				<strong>PERFECTION</strong>
+			</div>
 
 		return (
 			<div className="landing">

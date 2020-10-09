@@ -6,6 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import App from './App';
 
 import {
+  faSearch,
   faSignInAlt,
   faRunning,
   faEnvelope,
@@ -31,6 +32,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
+  faSearch,
   faSignInAlt,
   faRunning,
   faEnvelope,

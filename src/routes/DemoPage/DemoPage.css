@@ -98,7 +98,8 @@
 }
 .app_features li span {
     text-align: left;
-    width: 62%;
+    font-size: 18px;
+    width: 67%;
     min-height: 20px;
 }
 

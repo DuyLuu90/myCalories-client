@@ -1,10 +1,14 @@
+.Login-form{
+	max-width: 550px;
+}
+
 .Login-form input,
-.displayPassword,
-.form_help {
-	width: 75%;
+.displayPassword, .form_help {
+	width: 85%;
 	margin: auto;
 	margin-bottom: 10px;
 }
+
 .message {
 	color: red;
 	margin: 10px;
@@ -40,18 +44,29 @@
 .form input{
   padding:5px 10px;
   }
-.LoginForm .form_help {
+.LoginForm {
 	display: flex;
 	align-items: center;
 	color: blue;
 	font-size: 15px;
 }
-.form_help span {
-	margin: 5px;
+.form_help {
+	display: flex;
+	justify-content: space-evenly;
 }
+.form_help span {
+	width: 45%;
+	padding: 5px;
+	border-style: solid;
+	border-width: thin;
+	background-color: rgb(238, 199, 127);
+	color: rgb(24, 24, 128);
+	font-weight: bold;
+}
+
 .form_help span:hover {
 	cursor: pointer;
-	color: orange;
+	background-color: orange;
 }
 
 .error {

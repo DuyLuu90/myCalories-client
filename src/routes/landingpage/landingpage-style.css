@@ -1,5 +1,5 @@
 .landing {
-	margin-top: 150px;
+	margin-top: 60px;
 }
 .landing__header {
 	font-size: 30px;
@@ -43,13 +43,16 @@
 .quote {
 	color: white;
 	font-size: 20px;
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;	
 }
 .quote strong {
 	color: greenyellow;
 	margin: 5px;
-	font-size: 40px;
+	font-size: 35px;
 }
 .landing__link {
 	font-size: 20px;
@@ -63,7 +66,8 @@
 .landing__img {
 	margin: 0px auto;
 	margin-bottom: 50px;
-	padding-top: 300px;
+	display: flex;
+	align-items: center;
 	width: 95%;
 	height: auto;
 	min-height: 80vh;
@@ -71,4 +75,18 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+@media screen and (min-width: 730px){
+	.quote{
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+}
+@media screen and (min-width: 830px){
+	.quote strong {
+		font-size: 45px;
+	}
 }
