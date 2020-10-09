@@ -1,5 +1,5 @@
 .running__icon {
-    font-size: 40px;
+    display: none;
 }
 .app_nav {
     position: fixed; top:0; left:0; right:0; z-index: 10;
@@ -52,6 +52,13 @@
 }
 .app_nav .menu {
     display: none;
+}
+
+@media screen and (min-width: 420px){
+    .running__icon{
+        display: inline;
+        font-size: 40px;
+    }
 }
 
 @media screen and (min-width: 815px) {

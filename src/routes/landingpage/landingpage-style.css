@@ -42,12 +42,14 @@
 }
 .quote {
 	color: white;
-	font-size: 25px;
+	font-size: 20px;
+	width: 90%;
+	margin: 0 auto;
 }
 .quote strong {
 	color: greenyellow;
 	margin: 5px;
-	font-size: 45px;
+	font-size: 40px;
 }
 .landing__link {
 	font-size: 20px;
