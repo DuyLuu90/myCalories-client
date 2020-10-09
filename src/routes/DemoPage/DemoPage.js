@@ -68,7 +68,6 @@ export default class DemoPage extends Component{
                     <div className='tour_content'>
                         <h2>Registerd User:</h2>
                         <div className='app_features'>
-                            
                             <ul className='text'>
                                 <li><strong>Calorie Tracking:</strong><span>Monthly,weekly,daily</span></li>
                                 <li><strong>Meals tracking:</strong><span>Breakfast,lunch,dinner</span></li>
