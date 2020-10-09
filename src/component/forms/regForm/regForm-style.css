@@ -9,7 +9,7 @@
     margin-bottom: 10px;
 }
 .form_input label, .form_input header {
-    width: 30%;
+    width: 40%;
     text-align: left;
 }
 .form_input input {
@@ -41,7 +41,7 @@
     display: flex;
 }
 .formError .blank {
-    width: 30%;
+    width: 40%;
 }
 .formError .error{
     width: 60%;

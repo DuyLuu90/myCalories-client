@@ -9,6 +9,23 @@ To learn more about our user stories, please read [HERE](https://docs.google.com
 * Javascript
 * HTML5, JQuery, CSS
 
+## Screenshots:
+
+### Home Page:
+![Home Page](https://github.com/DuyLuu90/myCalories-client/blob/master/screenshots/HomePage.PNG)
+
+### Demo Page:
+![Demo Page](https://github.com/DuyLuu90/myCalories-client/blob/master/screenshots/DemoPage.PNG)
+
+### User Page:
+![User Page](https://github.com/DuyLuu90/myCalories-client/blob/master/screenshots/UserPage.PNG)
+
+### Login Page:
+![Login Page](https://github.com/DuyLuu90/myCalories-client/blob/master/screenshots/LoginPage.PNG)
+
+### Registration Page:
+![Reg Page](https://github.com/DuyLuu90/myCalories-client/blob/master/screenshots/RegPage.PNG)
+
 ## App Features:
 
 ### For general visitors: 
@@ -42,11 +59,11 @@ App is then ready to be deployed!
 
 ## Links:
 
-[Live version](https://calorie-counter-client.vercel.app/)
+[Live version](https://mycalories-client.vercel.app/)
 
-[API Server](https://sheltered-ravine-01866.herokuapp.com/)
+[API Server](https://nameless-hamlet-52392.herokuapp.com/)
 
-[Github Server](https://github.com/gdreid13/calorie-counter-server)
+[Github Server](https://github.com/DuyLuu90/myCalories-server)
 
 ## Learn more:
 

@@ -66,7 +66,7 @@ export default class App extends Component {
           {hasError &&<div className='red'>An unknown error has occurred.</div>}
           <div className="content"> 
             <Switch>
-              <Route exact path={'/'} component={(props) => <LandingPage {...props} />}/>
+              <Route exact path={'/'} component={(props) => <LandingPage {...props} token={this.state}/>}/>
               <Route path={'/tour'} component={DemoPage}/>
               <Route path={'/users/:id'} component={(props) => <HomePage {...props} userId={userid}/>}/>
               <Route path={'/register'}component={(props) => <RegistrationPage {...props} />}/>

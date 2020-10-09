@@ -31,7 +31,19 @@
 	margin-top: 200px;
 	font-size: 35px;
 	color: white;
-	transition: ease-in-out 0.5s;
+}
+.homePageLink:hover{
+	font-size: 55px;
+	color: greenyellow;
+}
+.quote {
+	color: white;
+	font-size: 25px;
+}
+.quote strong {
+	color: greenyellow;
+	margin: 5px;
+	font-size: 45px;
 }
 .landing__link {
 	font-size: 20px;
