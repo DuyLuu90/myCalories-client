@@ -1,9 +1,11 @@
 .fitnessTips {
-
   margin-top: 75px;
   position: relative;
+  margin-bottom: 40px;
 }
-
+.fitnessTips h1{
+  color: rgb(153, 133, 22);
+}
 .header {
   position: relative;;
   text-align: center;
@@ -16,7 +18,9 @@
 }
 
 .fitness__image {
-  height: 500px;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
   transition: ease-in-out 0.4s;
   border-radius: 4px;
 }
