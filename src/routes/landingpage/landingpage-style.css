@@ -61,7 +61,7 @@
 	width: 95%;
 	height: auto;
 	min-height: 80vh;
-	background-image: linear-gradient(#0505058f, #000000ad), url("../../assets/landing.jpg"); /* W3C */
+	background-image: linear-gradient(#0505058f, #000000ad), url("../../pictures/landing.jpg"); /* W3C */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
