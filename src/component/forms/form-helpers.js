@@ -56,9 +56,9 @@ export function BiometricComponent(){
         <div className='form_input'>
             <header>Biometric:</header>
             <div className='biometric'>
-                <input placeholder='Age' type="number" name='age' id='age' min='5'max='125'/>
-                <input placeholder='Height (in)' type="number" name='height' id='height'min='40'max='105'/>
-                <input placeholder='Weight (lb)' type="number" name='weight' id='weight' min='30'max='900'/>
+                <input placeholder='Age' type="number" name='age' id='age' min='5'max='125' required/>
+                <input placeholder='Height (in)' type="number" name='height' id='height'min='40'max='105' required/>
+                <input placeholder='Weight (lb)' type="number" name='weight' id='weight' min='30'max='900' required/>
             </div>
         </div>
     )
