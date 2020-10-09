@@ -26,9 +26,7 @@
     padding: 12px;
     cursor: pointer;
 }
-.demo_accounts{
-    padding: 15px;
-}
+
 .demo_accounts h2 {
     color: rgb(138, 120, 17);
 }
@@ -36,11 +34,11 @@
     margin-bottom: 20px;
 }
 .demo_accounts div {
-    width: 75%;
+    width: 90%;
     font-size: 16px;
     border-style: solid;
     min-width: 260px;
-    max-width: 600px;
+    max-width: 400px;
     margin: 40px auto;
     padding: 5px;
     background-color: orange;   
@@ -49,10 +47,10 @@
     display: flex;
 }
 .demo_accounts div strong {
-    width: 30%;
+    width: 33%;
 }
 .demo_accounts div span {
-    width: 70%;
+    width: 67%;
 }
 
 .tour_nav {
