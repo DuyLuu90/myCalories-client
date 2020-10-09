@@ -1,6 +1,8 @@
 import React, {Component}from 'react'
 import './DemoPage.css'
 import meal from '../../pictures/mealplans.PNG'
+import workout from '../../pictures/workoutplans.PNG'
+import tracking from '../../pictures/calorietracking.PNG'
 
 export default class DemoPage extends Component{
     
@@ -59,7 +61,7 @@ export default class DemoPage extends Component{
                             </div>
                             <div className='featureImg'>
                                 <img src={meal} alt='meal plans'/>
-                                <img src={'/assets/workoutplans.PNG'} alt='workout plans'/>
+                                <img src={workout} alt='workout plans'/>
                             </div>
                         </div>
                         
@@ -76,7 +78,7 @@ export default class DemoPage extends Component{
                                 <li><strong>Account help:</strong><span>Username recovery/password reset</span></li>
                             </ul>
                             <div className='featureImg'>
-                                <img src={'/assets/calorietracking.PNG'} alt='Calorie Tracking'/>
+                                <img src={tracking} alt='Calorie Tracking'/>
                             </div>
                         </div>
                     </div>}
