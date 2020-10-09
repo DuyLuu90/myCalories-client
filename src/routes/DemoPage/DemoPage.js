@@ -1,5 +1,6 @@
 import React, {Component}from 'react'
 import './DemoPage.css'
+import meal from '../../pictures/mealplans.PNG'
 
 export default class DemoPage extends Component{
     
@@ -57,7 +58,7 @@ export default class DemoPage extends Component{
                             Welcome to <strong>myCalories</strong>. As a visitor, you will have access to a variety of healthy recipes and workout plans. To learn more about user features, please click on the User tab above.
                             </div>
                             <div className='featureImg'>
-                                <img src={'/assets/mealplans.PNG'} alt='meal plans'/>
+                                <img src={meal} alt='meal plans'/>
                                 <img src={'/assets/workoutplans.PNG'} alt='workout plans'/>
                             </div>
                         </div>
