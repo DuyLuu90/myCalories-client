@@ -17,13 +17,13 @@ export default class LandingPage extends React.Component {
 		return (
 			<div className="landing">
 				<h3 className="landing__header">Keep track of your calorie intake to stay fit!</h3>
-				<h4 className="landing__description">
+				<div className="landing__description">
 					<Link className="landing__link" to={'/tour'}>
 						Take a tour
 					</Link>					
-				</h4>
+				</div>
 				<div className="landing__img">
-					<h4>{text}</h4>
+					{text}
 				</div>
 			</div>
 		);

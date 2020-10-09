@@ -2,15 +2,19 @@
 	margin-top: 150px;
 }
 .landing__header {
-	font-size: 40px;
+	font-size: 30px;
 	text-transform: uppercase;
+	margin: 15px auto;
+	width: 90%;
 	padding-bottom: 30px;
 	color: rgb(175, 151, 17);
 }
 
 .landing__description {
 	font-size: 25px;
-	padding-bottom: 30px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
 }
 
 .landing__link {
